@@ -922,7 +922,7 @@ position:relative;overflow:hidden;transition:color .35s}
   <div class="p-orb p-orb-2" aria-hidden="true"></div>
   <div class="sec-inner">
     <p class="sec-lbl rv">The Channel</p>
-    <h2 class="sec-h2 rv">Inspiration for a <em>discerningInspiration för en <em>köpstark&nbsp;målgrupp.</em>nbsp;audience.</em></h2>
+    <h2 class="sec-h2 rv">Inspiration for a <em>discerning&nbsp;audience.</em></h2>
     <div class="stats-grid">
       <div class="sc rv d1">
         <div class="sc-bg" aria-hidden="true">194</div>
@@ -1542,7 +1542,7 @@ if(spotSec){
   toFormBtn.addEventListener('click',()=>{
     if(!state.selTime)return;
     const d=state.selDate;
-    summaryEl.innerHTML=`Möte bokas: <b>${SV_DAYS_LONG[d.getDay()]} ${d.getDate()} ${SV_MONTHS[d.getMonth()]}, kl ${state.selTime}</b>`;
+    summaryEl.innerHTML=`Meeting: <b>${SV_DAYS_LONG[d.getDay()]} ${d.getDate()} ${SV_MONTHS[d.getMonth()]}, ${state.selTime}</b>`;
     goStage(3);
   });
 
@@ -1604,7 +1604,7 @@ if(spotSec){
     }catch(err){/* nätverksfel — faller tillbaka till mailto */}
 
     if(sent){
-      doneText.textContent='I'll get back to you within 24h with a calendar invite and confirmation of the time.';
+      doneText.textContent=`I'll get back to you within 24h with a calendar invite and confirmation of the time.`;
       goStage(4);
     }else{
       const body=
